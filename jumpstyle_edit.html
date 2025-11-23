@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aqmar Aja 19 Shop</title>
+  <link rel="icon" type="image/png" href="image/aqmar_aja_19_logo.jpg">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+      background: #dcdcdc;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      display: flex;
+      flex-direction: column; /* ← ini penting agar isinya vertikal */
+      align-items: center;    /* rata tengah horizontal */
+      padding: 40px 20px;
+    }
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 10hv; /* Tinggi banner (bisa disesuaikan) */
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Gambar menyesuaikan tanpa distorsi */
+      display: block;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 170px; /* Tinggi area gradasi */
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #dcdcdc);
+      /* Ubah warna putih di sini agar sesuai warna latar halaman */
+    }
+
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+</head>

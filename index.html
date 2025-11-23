@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aqmar Aja 19 Shop</title>
+  <link rel="icon" type="image/png" href="image/aqmar_aja_19_logo.jpg">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+     padding: 0;
+    }
+    /* ========== DASAR HALAMAN ========== */
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+      background: #dcdcdc;
+      flex-direction: column; /* Semua isi disusun ke bawah */
+      align-items: center;    /* Rata tengah horizontal */
+      padding: 40px 20px;
+      justify-content: center;
+      display: flex;
+      margin-bottom: 17px;
+    }
+
+    /* ========== BAGIAN GRID ========== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      width: 100%;
+      position: static;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      width: 100%;
+      position: static;
+    }
+
+    /* ========== KARTU ========== */
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+    h1, p {
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero {
+      position: relative;
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.2), transparent 60%);
+    }
+
+    .title {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      font-weight: 800;
+      color: white;
+      font-size: 24px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .price {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      font-weight: 700;
+      color: white;
+      font-size: 18px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .body {
+      padding: 16px;
+    }
+
+    .desc-title {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .desc-text {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* ========== BANNER ========== */
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 40vh; /* tinggi banner */
+      overflow: hidden;
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #dcdcdc);
+    }
+
+    /* ========== TEKS & HEADING ========== */
+    h1 {
+      margin: 48px 0 24px 0;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 800px;
+      margin-bottom: 40px;
+      color: #333;
+      margin-bottom: 2PX;
+      font-size: 20px;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+        padding: 20px;
+      }
+      .banner {
+        height: 17vh;
+        border-radius: 5px;
+      }
+      .banner img {
+        content: url("image/banner_mobile.jpg");
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .banner::after {
+        height: 60px;
+      }
+    }
+    .grid, .grid2 {
+      margin: 0 auto;        /* memastikan tetap ditengah */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- BANNER -->
+  <div class="banner">
+    <img src="image/banner.jpg" alt="Banner Website">
+  </div>
+
+  <!-- BAGIAN 1 -->
+  <h1>Aqmar Aja 19 Shop</h1>
+  <p>Jasa Editor Simpel Murah Dengan Hasil Yang Sangat Memuaskan</p>
+
+  <h1>Jasa Editing Video</h1>
+  <div class="grid">
+    <div class="card" onclick="location.href='tugas_sekolah.html'">
+      <div class="hero" style="background-image: url('image/tugas_sekolah.jpg');">
+        <div class="title">Tugas Sekolah</div>
+        <div class="price">Rp3.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Tugas Sekolah</div>
+        <div class="desc-text">Jasa edit untuk menyelesaikan tugas sekolah kalian yang menggunakan video.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="location.href='cinematic.html'">
+      <div class="hero" style="background-image: url('image/cinematic_color_grading.jpg');">
+        <div class="title">Cinematic</div>
+        <div class="price">Rp4.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Cinematic Color Grading</div>
+        <div class="desc-text">Jasa Color Grading dengan style cinematic untuk video kalian yang kurang bagus (pucat).</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="location.href='jumpstyle_edit.html'">
+      <div class="hero" style="background-image: url('image/jumpstyle_edit.jpg');">
+        <div class="title">Jumpstyle</div>
+        <div class="price">Rp5.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Jumpstyle Edit</div>
+        <div class="desc-text">Buat trend edit Jumpstyle penuh semangat versi kamu sendiri.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="location.href='montagem.html'">
+      <div class="hero" style="background-image: url('image/montagem_edit.jpg');">
+        <div class="title">Montagem</div>
+        <div class="price">Rp7.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Montagem Edit</div>
+        <div class="desc-text">Gaya editing yang penuh semangat dengan banyak visual efek.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BAGIAN 2 -->
+  <h1>Jasa Desain Grafis</h1>
+  <div class="grid2">
+    <div class="card" onclick="location.href='poster.html'">
+      <div class="hero" style="background-image: url('image/poster.jpg');">
+        <div class="title">Poster</div>
+        <div class="price">Rp4.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Desain Poster</div>
+        <div class="desc-text">Dapatkan desain poster terbaikmu di sini, dengan pemilihan warna dan gradasi terbaik.</div>
+      </div>
+    </div>
+    <div class="card" onclick="location.href='poster.html'">
+      <div class="hero" style="background-image: url('image/timpa_teks.jpg');">
+        <div class="title">Timpa Teks</div>
+        <div class="price">Rp5.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Timpa Teks</div>
+        <div class="desc-text">Ubah Teks Asli Pada Sebuah Foto Menjadi Teks Custom Yang Tidak Nyata !Jangan Di Gunakan Untuk Hal Buruk!</div>
+      </div>
+    </div>
+    <div class="card" onclick="location.href='poster.html'">
+      <div class="hero" style="background-image: url('image/id_card.png');">
+        <div class="title">Id Card</div>
+        <div class="price">Rp8.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Id Card Simpel</div>
+        <div class="desc-text">Buatlah Desain Id Card Terbaik Kalian Di Sini</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
