@@ -1,1 +1,0 @@
-# aqmaraja19shop
