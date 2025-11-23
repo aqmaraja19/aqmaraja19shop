@@ -1,0 +1,6 @@
+{
+  "rewriters": [
+    { "source":"/tugas-sekolah","destination":"/tugas_sekolah.html" }
+  ]
+{
+    
