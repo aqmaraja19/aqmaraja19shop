@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'minecraft-ten';
+    src: url('font/MinecraftTen-VGORe.ttf') format('opentype');
+}
+
+/* Class khusus untuk font custom */
+.MinecraftTen {
+    font-family: 'minecraft-ten';
+}

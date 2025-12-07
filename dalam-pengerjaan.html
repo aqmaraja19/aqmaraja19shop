@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sedang Dalam Pengerjaan</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 40px;
+      font-family: Inter, system-ui, sans-serif;
+      background: linear-gradient(160deg, #0a1428, #14284a);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* CARD GLASS */
+    .card {
+      background: rgba(255,255,255,0.12);
+      padding: 30px 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(255,255,255,0.18);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 420px;
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #e0ecff;
+      text-shadow: 0 0 6px rgba(0,150,255,0.45);
+    }
+
+    .desc {
+      font-size: 16px;
+      opacity: 0.85;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      opacity: 0.8;
+      text-shadow: 0 0 10px rgba(0,150,255,0.5);
+    }
+
+    .home-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 12px 24px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #06b6d4, #22d3ee);
+      color: #0b1628;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .home-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="icon">🚧</div>
+    <div class="title">Halaman Sedang Dalam Pengerjaan</div>
+
+    <div class="desc">
+      Saat ini halaman ini sedang diperbarui atau belum tersedia.  
+      Silakan cek kembali nanti — kami sedang menyiapkan tampilan terbaik untuk Anda!
+    </div>
+
+    <a href="index.html" class="home-btn">Kembali ke Beranda</a>
+  </div>
+
+</body>
+</html>

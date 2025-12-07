@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Daftar Kartu</title>
+  <link rel="icon" type="image/png" href="image/aqmar_aja_19_logo.jpg">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+      background: linear-gradient(160deg, #0a1428, #14284a); /* Dark Blue */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px 20px;
+      color: white;
+    }
+
+    /* Judul halaman */
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 3px;
+      color: #e2e8f0; /* soft white */
+      text-align: center;
+      text-shadow: 0 0 12px rgba(0, 153, 255, 0.35);
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 32px;
+      color: #e2e8f0; /* soft white */
+      text-align: center;
+      text-shadow: 0 0 12px rgba(0, 153, 255, 0.35);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      width: 100%;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+
+    /* CARD DARK GLASS STYLE */
+    a.card {
+      background: rgba(255,255,255,0.12); /* soft glass */
+      border-radius: 20px;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(255,255,255,0.18);
+
+      /* Soft shadow */
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    a.card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+    }
+
+    .hero {
+      position: relative;
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      /* lebih gelap untuk dark theme */
+      background: linear-gradient(rgba(0,0,0,0.45), transparent 70%);
+    }
+
+    .title {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      font-weight: 800;
+      color: #e2e8f0;
+      font-size: 22px;
+      text-shadow: 0 0 8px rgba(0,150,255,0.6);
+    }
+
+    .price {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      font-weight: 700;
+      color: #fff;
+      font-size: 18px;
+      text-shadow: 0 0 8px rgba(0,150,255,0.6);
+    }
+
+    .body {
+      padding: 16px;
+    }
+
+    .desc-title {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #dce6f3;
+    }
+
+    .desc-text {
+      font-size: 14px;
+      opacity: 0.85;
+      color: #cdd6e6;
+    }
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 200px; /* tinggi banner */
+      overflow: hidden;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+      margin-top: 40px;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .kotak-outline {
+      width: 100%;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;      /* vertikal tengah */
+      justify-content: center;  /* horizontal tengah */
+
+      outline: 2px solid white; 
+      height: 35px;
+      font-size: 20px;
+      text-shadow: 0 0 12px rgba(0, 153, 255, 0.35);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.253);
+      box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.253);
+      
+    }
+    .img-containt {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      box-shadow: 0 0 25px rgba(0, 255, 55, 0.356);
+    }
+
+    .jarak {
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ffffff23;
+      margin-top: 40px;
+      color: #ffffff;
+      border-top: 1px solid #ffffff;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+      .banner {
+        height: 90px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      .banner::after {
+        height: 60px;
+      }
+      p {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="banner">
+    <img src="image/banner.jpg" alt="Banner Website">
+  </div>
+  <!-- JUDUL HALAMAN -->
+  <h1 class="MinecraftTen">Aqmar Aja 19 Shop</h1>
+  <p>
+    Mulai dari editing hingga desain - semua yang Anda butuhkan untuk tampil lebih menarik.
+  </p>
+  <div class="kotak-outline">
+    <b>🎥 Video Editing</b>
+  </div>
+  <!-- GRID KARTU -->
+  <div class="grid">
+    <a href="jasa-editing-simpel.html" class="card">
+      <div class="hero" style="background-image: url('image/edit_simpel.jpg');">
+        <div class="title">Edit Simpel</div>
+        <div class="price">Rp2.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Edit Simpel</div>
+        <div class="desc-text">Butuh Editing Yang Simpel, Cepat, Dan Keren?<br>Di Sinilah Solusi Nya. </div>
+      </div>
+    </a>
+
+    <a href="jasa-edit-cinematic.html" class="card">
+      <div class="hero" style="background-image: url('image/cinematic-edit.jpg');">
+        <div class="title">Cinematic</div>
+        <div class="price">Rp3.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Cinematic Edit</div>
+        <div class="desc-text">Dapatkan Edit Dan Hasil Terbaik Untuk Video Cinematic Kalian.</div>
+      </div>
+    </a>
+
+    <a href="jasa-motion-edit.html" class="card">
+      <div class="hero" style="background-image: url('image/motion-edit.jpg');">
+        <div class="title">Motion Edit</div>
+        <div class="price">Rp5.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Motion Edit</div>
+        <div class="desc-text">Buatlah Motion Edit Keren Kalian Seperti Yang Sedang FYP Di Tiktok</div>
+      </div>
+    </a>
+    <a href="jasa-editing-video-panjang-1.html" class="card">
+      <div class="hero" style="background-image: url('image/video_panjang_1.jpg');">
+        <div class="title">Video Panjang 1</div>
+        <div class="price">Rp7.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Video Panjang (1 Menit Lebih)</div>
+        <div class="desc-text">Layanan Yang Di Khususkan Untuk Kalian Yang Ingin Membuat Video Berdurasi Lebih Dari 1 Menit</div>
+      </div>
+    </a>
+
+    <a href="jasa-editing-video-panjang-2.html" class="card">
+      <div class="hero" style="background-image: url('image/video_panjang_2.jpg');">
+        <div class="title">Video Panjang 2</div>
+        <div class="price">Rp12.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Video Panjang (5 Menit Lebih)</div>
+        <div class="desc-text">Layanan Yang Di Khususkan Untuk Kalian Yang Ingin Membuat Video Berdurasi Lebih Lama Dari 5 Menit</div>
+      </div>
+    </a>
+
+  </div>
+  
+
+  <div class="kotak-outline">
+    <b>🎨 Desain Grafis</b>
+  </div>
+
+  <div class="grid">
+    <a href="jasa-thumnail-video.html" class="card">
+      <div class="hero" style="background-image: url('image/thumnail-video.jpg');">
+        <div class="title">Thumnail Video</div>
+        <div class="price">Rp2.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Thumnail Video</div>
+        <div class="desc-text">Jasa Yang Yang Menyediakan Pembuatan Thumnail Video Untuk Keperluan YouTube Ataupun Sosmed Lainya</div>
+      </div>
+    </a>
+
+    <a href="dalam-pengerjaan.html" class="card">
+      <div class="hero" style="background-image: url('image/dalam-pengerjaan.jpg');">
+        <div class="title">Poster Digital</div>
+        <div class="price">Rp5.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Poster Digital</div>
+        <div class="desc-text">Kalian Bingung Cara Bikin Poster Yang Bagus?<br>Di Sini Kami Menyediakan Jasa Pembuatan Poster Dengan Hasil Yang Cukup Bagus</div>
+      </div>
+    </a>
+
+    <a href="dalam-pengerjaan.html" class="card">
+      <div class="hero" style="background-image: url('image/dalam-pengerjaan.jpg');">
+        <div class="title">Dalam Pengerjaan</div>
+        <div class="price">Rp -</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Dalam Pengerjaan</div>
+        <div class="desc-text">Kami Sedang Mengerjakan Halaman Ini</div>
+      </div>
+    </a>
+  </div>
+
+  
+  <div class="kotak-outline">
+    <img src="image/grass.jpg" class="img-containt"><b class="jarak">  Kebutuhan Minecraft  </b><img src="image/grass.jpg" class="img-containt">
+  </div>
+
+  <div class="grid">
+    <a href="dalam-pengerjaan.html" class="card">
+      <div class="hero" style="background-image: url('image/dalam-pengerjaan.jpg');">
+        <div class="title">Resource Pack</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Resource Pack Gratis</div>
+        <div class="desc-text">Dapatkan Resource Pack Minecraft Java Maupun Bedrock Gratis Di Sini.</div>
+      </div>
+    </a>
+
+    <a href="dalam-pengerjaan.html" class="card">
+      <div class="hero" style="background-image: url('image/dalam-pengerjaan.jpg')">
+        <div class="title">Minecraft Bedrock Addon</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Minecraft Bedrock Addon</div>
+        <div class="desc-text">Dapatkan Addon Minecraft Bedrock Gratis Di Sini</div>
+      </div>
+    </a>
+
+    <a href="dalam-pengerjaan.html" class="card">
+      <div class="hero" style="background-image: url('image/dalam-pengerjaan.jpg');">
+        <div class="title">Skin Minecraft</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Skin Minecraft</div>
+        <div class="desc-text">Dapatkan Skin Minecraft Gratis Maupun Berbayar Di Sini.</div>
+      </div>
+    </a>
+  </div>
+</body>
+<footer>
+  © 2025 Aqmar Aja 19 — Jasa Editing, Desain Grafis, Dan Keperluan Minecraft
+</footer>
+</html>

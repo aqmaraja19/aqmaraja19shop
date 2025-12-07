@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Daftar Kartu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+      background: #dcdcdc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    /* Judul halaman */
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 32px;
+      color: #222;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    a.card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    a.card:hover {
+      transform: scale(1.02);
+    }
+
+    .hero {
+      position: relative;
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.25), transparent 60%);
+    }
+
+    .title {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      font-weight: 800;
+      color: white;
+      font-size: 24px;
+    }
+
+    .price {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      font-weight: 700;
+      color: white;
+      font-size: 18px;
+    }
+
+    .body {
+      padding: 16px;
+    }
+
+    .desc-title {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .desc-text {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- JUDUL HALAMAN -->
+  <h1>Contoh</h1>
+
+  <!-- GRID KARTU -->
+  <div class="grid">
+    <a href="halaman1.html" class="card">
+      <div class="hero" style="background-image: url('gambar1.jpg');">
+        <div class="title">Judul 1</div>
+        <div class="price">Rp10.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Deskripsi</div>
+        <div class="desc-text">Item pertama.</div>
+      </div>
+    </a>
+
+    <a href="halaman2.html" class="card">
+      <div class="hero" style="background-image: url('gambar2.jpg');">
+        <div class="title">Judul 2</div>
+        <div class="price">Rp15.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Deskripsi</div>
+        <div class="desc-text">Item kedua.</div>
+      </div>
+    </a>
+
+    <a href="halaman3.html" class="card">
+      <div class="hero" style="background-image: url('gambar3.jpg');">
+        <div class="title">Judul 3</div>
+        <div class="price">Rp20.000</div>
+      </div>
+      <div class="body">
+        <div class="desc-title">Deskripsi</div>
+        <div class="desc-text">Item ketiga.</div>
+      </div>
+    </a>
+  </div>
+</body>
+</html>
